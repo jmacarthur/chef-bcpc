@@ -19,6 +19,20 @@
 
 require 'ipaddr'
 
+print "Hello world. Node is #{node}\n\n"
+
+print "node['platform'] is #{node['platform']}\n\n"
+print "node['jmac'] is #{node['jmac']}\n\n"
+
+node.override['bcpc']['management']['interface'] = 'enp0s3'
+node.set['bcpc']['management']['interface'] = "enp0s3"
+node.default['bcpc']['management']['interface'] = 'enp0s3'
+
+print "node['bcpc']['management']['interface'] is #{node['bcpc']['management']['interface']}\n\n"
+
+print node['network']['interfaces'][node['bcpc']['management']['interface']]['addresses']
+
+
 node.set['bcpc']['management']['ip'] = node['network']['interfaces'][node['bcpc']['management']['interface']]['addresses'].select { |k, v| v['family'] == "inet" and k != node['bcpc']['management']['vip'] }.first[0]
 
 # Compute the bitlen for each of the network cidrs
