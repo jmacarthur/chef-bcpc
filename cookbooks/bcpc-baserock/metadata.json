@@ -1,0 +1,30 @@
+{
+  "groupings": {
+  },
+  "maintainer_email": "jim.macarthur@codethink.co.uk",
+  "platforms": {
+  },
+  "replacing": {
+  },
+  "conflicting": {
+  },
+  "name": "bcpc-baserock",
+  "suggestions": {
+  },
+  "attributes": {
+  },
+  "recipes": {
+  },
+  "providing": {
+  },
+  "maintainer": "Codethink",
+  "license": "Apache License 2.0",
+  "description": "Installs/Configures Baserock hosts for use in Ceph clusters",
+  "recommendations": {
+  },
+  "version": "0.3.0",
+  "long_description": "bcpc-baserock Cookbook\n===============\n\nChef recipes for preparing Baserock nodes for BCPC.\n",
+  "dependencies": {
+    "bcpc": ">= 0.4.0"
+  }
+}
