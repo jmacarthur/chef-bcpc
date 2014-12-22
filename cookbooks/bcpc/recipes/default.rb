@@ -24,9 +24,9 @@ print "Hello world. Node is #{node}\n\n"
 print "node['platform'] is #{node['platform']}\n\n"
 print "node['jmac'] is #{node['jmac']}\n\n"
 
-node.override['bcpc']['management']['interface'] = 'enp0s3'
-node.set['bcpc']['management']['interface'] = "enp0s3"
-node.default['bcpc']['management']['interface'] = 'enp0s3'
+node.override['bcpc']['management']['interface'] = 'eth0'
+node.set['bcpc']['management']['interface'] = "eth0"
+node.default['bcpc']['management']['interface'] = 'eth0'
 
 print "node['bcpc']['management']['interface'] is #{node['bcpc']['management']['interface']}\n\n"
 
