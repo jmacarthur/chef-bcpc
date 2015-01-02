@@ -18,7 +18,6 @@
       "domain_name" : "bcpc.example.com",
       "management": {
         "vip" : "10.0.100.5",
-        "interface" : "eth0",
         "netmask" : "255.255.255.0",
         "cidr" : "10.0.100.0/24",
         "gateway" : "10.0.100.3"
