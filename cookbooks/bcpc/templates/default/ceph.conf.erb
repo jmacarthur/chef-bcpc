@@ -24,8 +24,8 @@
     keyring = /var/lib/ceph/osd/$cluster-$id/keyring
     osd journal size = 1024
     filestore_xattr_use_omap = true
-    osd_fs_type = xfs
-    osd_fs_mount_options_xfs = noexec,nodev,noatime,nodiratime,barrier=0,discard
+    osd_fs_type = ext4
+    osd_fs_mount_options_ext4 = noexec,nodev,noatime,nodiratime,barrier=0,discard
     osd_crush_update_on_start = false
 
 [client.radosgw.gateway]
