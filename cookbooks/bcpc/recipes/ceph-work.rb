@@ -47,7 +47,7 @@ end
         execute "ceph-disk-prepare-#{type}-#{disk}" do
             command <<-EOH
                 ceph-disk-prepare /dev/#{disk} --cluster ceph
-                ceph-disk-activate /dev/#{disk} --cluster ceph
+                ceph-disk-activate /dev/#{disk}
                 sleep 2
                 INFO=`df -k | grep /dev/#{disk} | awk '{print $2,$6}' | sed -e 's/\\/var\\/lib\\/ceph\\/osd\\/ceph-//'`
                 OSD=${INFO#* }
